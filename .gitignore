@@ -1,0 +1,33 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Go modules
+/vendor/
+
+# IDE
+.idea/
+*.iml
+vscode/
+.DS_Store
+
+# Build artifacts (твои бинари)
+/arturmarlboro-v1
+/app/arturmarlboro-v1
+
+# Docker
+*.log
+docker-compose.*.yml
+
+# Database (чтобы не коммитить данные)
+assistant.db
+
+# Environment files
+.env
+.env.local

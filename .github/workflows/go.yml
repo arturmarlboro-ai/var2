@@ -2,7 +2,10 @@ name: Go
 
 on:
   push:
-    branches: ["main"]
+    branches: 
+      - main
+      - new_workflow
+
 
 jobs:
   build:
@@ -72,5 +75,3 @@ jobs:
         run: go test -race -v ./...
         env:
           CGO_ENABLED: "1"
-
-

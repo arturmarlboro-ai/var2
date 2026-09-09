@@ -62,12 +62,13 @@ jobs:
   demo-race-go120:
     runs-on: ubuntu-latest
     container:
-      image: golang:1.20-alpine
+      image: golang:1.20-bullseye  # <-- вот это ключевое изменение
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Run race test with CGO
+      - name: Run race test (CGO + gcc available)
         run: go test -race -v ./...
         env:
           CGO_ENABLED: "1"
+
 
